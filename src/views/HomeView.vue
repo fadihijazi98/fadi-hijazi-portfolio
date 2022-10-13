@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-    <!-- TODO -->
+    <p class="text-xl">Home</p>
   </div>
 </template>
 

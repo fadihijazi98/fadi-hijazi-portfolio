@@ -13,6 +13,8 @@ yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
 
+full.tailwind.config.js
+
 # Editor directories and files
 .idea
 .vscode
