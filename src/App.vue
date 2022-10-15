@@ -8,7 +8,7 @@
         </button>
       </div>
       <div id="menu-wrapper"
-           :class="[hiddenClass, 'pb-8', 'mb-16', 'shadow-lg', 'shadow-sky-500', 'lg:pb-0', 'lg:mb-0', 'lg:shadow-none',
+           :class="[hiddenClass, 'pb-8', 'mb-16', 'lg:pb-0', 'lg:mb-0', 'lg:shadow-none',
                     'lg:flex', 'lg:h-screen', 'w-full', 'items-center', 'justify-center']">
         <div>
           <div class="my-8 flex justify-center">
@@ -28,7 +28,7 @@
     <main class="lg:col-start-3 lg:col-span-10">
       <div class="lg:h-screen text-white lg:grid lg:grid-cols-12">
         <div class="lg:col-start-1 lg:col-span-1"></div>
-        <div class="lg:col-start-2 lg:col-span-10">
+        <div class="lg:col-start-2 lg:col-span-10 flex items-center">
           <router-view />
         </div>
         <div class="lg:col-start-12 lg:col-span-1"></div>
