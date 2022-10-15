@@ -1,8 +1,15 @@
 <template>
-  <div class="grid grid-cols-12">
+  <div class="lg:grid lg:grid-cols-12 sm:flex sm:flex-col">
     <!-- custom left fixed header -->
-    <header class="col-start-1 col-span-2">
-      <div class="flex h-screen w-full items-center justify-center">
+    <header class="lg:col-start-1 lg:col-span-2">
+      <div class="text-center my-4 lg:hidden">
+        <button @click="toggleHiddenClass">
+          <img src="@/assets/icons/menu.svg" class="w-12" />
+        </button>
+      </div>
+      <div id="menu-wrapper"
+           :class="[hiddenClass, 'pb-8', 'mb-16', 'shadow-lg', 'shadow-sky-500', 'lg:pb-0', 'lg:mb-0', 'lg:shadow-none',
+                    'lg:flex', 'lg:h-screen', 'w-full', 'items-center', 'justify-center']">
         <div>
           <div class="my-8 flex justify-center">
             <img src="@/assets/images/personal-image-05.png" class="w-24 rounded-lg" />
@@ -19,9 +26,13 @@
       </div>
     </header>
     <!-- content -->
-    <main class="col-start-3 col-span-10">
-      <div class="h-screen text-white">
-        <router-view />
+    <main class="lg:col-start-3 lg:col-span-10">
+      <div class="lg:h-screen text-white lg:grid lg:grid-cols-12">
+        <div class="lg:col-start-1 lg:col-span-1"></div>
+        <div class="lg:col-start-2 lg:col-span-10">
+          <router-view />
+        </div>
+        <div class="lg:col-start-12 lg:col-span-1"></div>
       </div>
     </main>
   </div>
@@ -32,10 +43,13 @@ export default {
   name: "App",
   data() {
     return {
+      hiddenClass: {
+        "hidden": true
+      },
       menuItems: [
         {
           title: "Home",
-          path: "/home",
+          path: "/",
           isActive: true
         },
         {
@@ -55,6 +69,11 @@ export default {
         }
       ]
     };
+  },
+  methods: {
+    toggleHiddenClass() {
+      this.hiddenClass['hidden'] = !this.hiddenClass['hidden'];
+    }
   }
 };
 </script>
@@ -75,6 +94,6 @@ body {
 }
 
 .active {
-  @apply border-l-4 px-4
+  @apply border-b-4 border-white p-1
 }
 </style>

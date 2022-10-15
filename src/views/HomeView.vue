@@ -1,12 +1,14 @@
 <template>
-  <div class="h-full grid grid-cols-10">
-    <div class="flex items-center col-start-1 col-span-6">
+  <div class="lg:grid lg:grid-cols-10 h-full">
+    <div class="flex items-center lg:col-start-1 lg:col-span-6">
       <div class="px-16">
-        <h1 class="text-6xl leading-tight font-anton">
-          Hey, <br />
-          I'm Fadi Hijazi
-        </h1>
-        <p class="text-2xl py-8">
+        <div class="flex justify-center lg:justify-start">
+          <h1 class="text-4xl lg:text-6xl leading-tight lg:leading-tight font-anton">
+            Hey, <br />
+            I'm Fadi Hijazi
+          </h1>
+        </div>
+        <p class="text-lg lg:text-2xl py-8">
           A full stack web developer. <br />
           <span class="block py-3">
               I'm a
@@ -18,7 +20,7 @@
           </span>
           Designing & coding the solutions, its my game! <br />
           I'm a good choice to work with, so
-          <a href="#" class="uppercase text-blue-200 font-bold tracking-wider">
+          <a href="#" class="uppercase text-sky-500 font-bold tracking-wider">
             get in touch
           </a>
           now.
@@ -40,9 +42,10 @@
         </div>
       </div>
     </div>
-    <div class="flex items-end justify-start col-start-7 col-span-3">
+    <div class="flex items-end justify-center lg:col-start-7 lg:col-span-3 pt-4 lg:pt-0">
       <img
         src="@/assets/images/personal-image-01.png"
+        class="w-3/6 lg:w-full"
         alt="my personal image"
       />
     </div>
