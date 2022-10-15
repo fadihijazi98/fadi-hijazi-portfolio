@@ -17,8 +17,7 @@
           <nav class="flex flex-col items-center gap-6 text-white text-xl font-bold tracking-widest">
             <router-link
               v-for="(item, i) in menuItems"
-              :to="item.path" :key="'menu-'+i"
-              :class="[{'active': item.isActive,}, '']">
+              :to="item.path" :key="'menu-'+i">
               {{ item.title }}
             </router-link>
           </nav>
@@ -50,22 +49,18 @@ export default {
         {
           title: "Home",
           path: "/",
-          isActive: true
         },
         {
           title: "Skills",
           path: "/skills",
-          isActive: false
         },
         {
           title: "Experience",
           path: "/experience",
-          isActive: false
         },
         {
           title: "Get in Touch",
           path: "/get-in-touch",
-          isActive: false
         }
       ]
     };
@@ -93,7 +88,7 @@ body {
   ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
-.active {
+.router-link-active {
   @apply border-b-4 border-white p-1
 }
 </style>
